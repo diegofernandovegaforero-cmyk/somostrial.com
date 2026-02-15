@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Code, Layout, Funnel, Smartphone, Users, Video } from 'lucide-react';
+import { Code, Layout, Filter, Smartphone, Users, Video } from 'lucide-react';
 
 const services = [
     {
@@ -20,7 +20,7 @@ const services = [
     {
         title: "Embudos de Venta (Funnels)",
         description: "Sistemas automatizados que guían a tus prospectos hasta la compra 24/7.",
-        icon: <Funnel className="w-6 h-6" />,
+        icon: <Filter className="w-6 h-6" />,
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
         color: "bg-indigo-50 text-indigo-600"
     },
