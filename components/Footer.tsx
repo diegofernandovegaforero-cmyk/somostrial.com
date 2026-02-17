@@ -25,7 +25,7 @@ export default function Footer() {
                                 </a>
                                 <a
                                     href="mailto:digitrialsolucionesdigitales@gmail.com"
-                                    className="bg-slate-700 hover:bg-slate-600 transition px-8 py-3 rounded-xl font-bold flex items-center gap-2 text-white border border-slate-600"
+                                    className="bg-slate-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 px-8 py-3 rounded-xl font-bold flex items-center gap-2 text-white border border-slate-600 hover:border-transparent"
                                 >
                                     <Mail className="w-5 h-5" /> Email
                                 </a>
