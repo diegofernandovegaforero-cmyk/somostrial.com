@@ -1,7 +1,12 @@
 'use client';
 import Image from 'next/image';
+import { useCountUp } from '@/hooks/useCountUp';
 
 export default function About() {
+    const projectsCount = useCountUp(50, 2000);
+    const fidelityCount = useCountUp(98, 2000);
+    const commitmentCount = useCountUp(100, 2000);
+
     return (
         <section className="py-24 px-6 bg-white overflow-hidden">
             <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -27,20 +32,26 @@ export default function About() {
                     </p>
 
                     <div className="grid grid-cols-2 gap-x-8 gap-y-12">
-                        <div>
-                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">50+</p>
+                        <div ref={projectsCount.elementRef}>
+                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">
+                                {projectsCount.count}+
+                            </p>
                             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Proyectos Exitosos</p>
                         </div>
-                        <div>
-                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">98%</p>
+                        <div ref={fidelityCount.elementRef}>
+                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">
+                                {fidelityCount.count}%
+                            </p>
                             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Tasa de Fidelidad</p>
                         </div>
                         <div>
                             <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">24/7</p>
                             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Soporte Dedicado</p>
                         </div>
-                        <div>
-                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">100%</p>
+                        <div ref={commitmentCount.elementRef}>
+                            <p className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">
+                                {commitmentCount.count}%
+                            </p>
                             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Compromiso</p>
                         </div>
                     </div>
