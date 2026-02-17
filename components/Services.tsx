@@ -28,7 +28,7 @@ const services = [
         title: "Estrategia Social Media",
         description: "No solo publicamos, construimos comunidades leales y amplificamos tu voz de marca.",
         icon: <Users className="w-6 h-6" />,
-        image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=600&q=80",
+        image: "/images/social-media-logos.jpg",
         color: "bg-cyan-50 text-cyan-600"
     },
     {
