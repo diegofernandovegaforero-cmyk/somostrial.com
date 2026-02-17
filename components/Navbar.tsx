@@ -34,7 +34,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                         href="#contact"
-                        className="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-slate-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        className="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                     >
                         Contacto
                     </Link>
