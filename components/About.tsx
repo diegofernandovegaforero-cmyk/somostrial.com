@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { useCountUp } from '@/hooks/useCountUp';
 
 export default function About() {
@@ -11,13 +10,15 @@ export default function About() {
         <section className="py-24 px-6 bg-white overflow-hidden">
             <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
                 <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group">
-                    <Image
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                        alt="Colaboración DIGITRIAL"
-                        width={800}
-                        height={600}
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                    >
+                        <source src="/videos/about-team.mp4.mp4" type="video/mp4" />
+                    </video>
                     <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
 
