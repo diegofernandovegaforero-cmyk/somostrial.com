@@ -8,24 +8,24 @@ export default function Hero() {
             <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 {/* Text Content */}
                 <div className="order-2 lg:order-1">
-                    <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-8 border border-blue-100">
+                    <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-8 border border-blue-100 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                         Innovación Digital en Colombia
                     </div>
 
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-slate-900 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-slate-900 tracking-tight opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                         Impulsamos tu <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient-x">
                             Visión Digital
                         </span>
                     </h1>
 
-                    <p className="text-gray-500 text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
+                    <p className="text-gray-500 text-lg md:text-xl mb-10 max-w-lg leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                         Somos el Centro de Soluciones que transforma desafíos complejos en
                         oportunidades de crecimiento medibles a través de tecnología y estrategia.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                         <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                             Explorar Servicios <ArrowRight className="w-5 h-5" />
                         </button>
@@ -42,7 +42,7 @@ export default function Hero() {
                 </div>
 
                 {/* Image Content */}
-                <div className="order-1 lg:order-2 relative">
+                <div className="order-1 lg:order-2 relative opacity-0 animate-scale-in" style={{ animationDelay: '0.2s' }}>
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-all duration-500">
                         {/* Using a standard reliable Unsplash ID */}
                         <Image
@@ -59,7 +59,7 @@ export default function Hero() {
                     </div>
 
                     {/* Floating Stat Card */}
-                    <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-50 flex items-center gap-4 animate-bounce-slow">
+                    <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-50 flex items-center gap-4 animate-bounce-slow opacity-0 animate-scale-in" style={{ animationDelay: '0.6s' }}>
                         <div className="bg-green-100 p-4 rounded-xl text-green-600">
                             <TrendingUp className="w-8 h-8" />
                         </div>
@@ -70,8 +70,8 @@ export default function Hero() {
                     </div>
 
                     {/* Decorative Elements */}
-                    <div className="absolute -top-10 -right-10 w-24 h-24 bg-blue-100 rounded-full blur-2xl -z-10"></div>
-                    <div className="absolute top-1/2 -left-10 w-32 h-32 bg-purple-100 rounded-full blur-3xl -z-10"></div>
+                    <div className="absolute -top-10 -right-10 w-24 h-24 bg-blue-100 rounded-full blur-2xl -z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}></div>
+                    <div className="absolute top-1/2 -left-10 w-32 h-32 bg-purple-100 rounded-full blur-3xl -z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}></div>
                 </div>
             </div>
         </section>
