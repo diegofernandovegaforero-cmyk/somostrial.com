@@ -28,7 +28,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-8 text-sm font-medium">
                     <Link href="#" className="text-blue-600 font-semibold">Inicio</Link>
                     <Link href="#services" className="hover:text-blue-600 transition text-gray-600">Servicios</Link>
-                    <Link href="#" className="hover:text-blue-600 transition text-gray-600">Tienda</Link>
+                    <Link href="#services" className="hover:text-blue-600 transition text-gray-600">Tienda</Link>
                     <Link href="#" className="text-gray-600 hover:text-blue-600 transition">
                         <ShoppingCart className="w-5 h-5" />
                     </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
                     <div className="flex flex-col p-6 space-y-4 font-medium text-slate-900">
                         <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Inicio</Link>
                         <Link href="#services" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Servicios</Link>
-                        <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Tienda</Link>
+                        <Link href="#services" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Tienda</Link>
                         <Link href="#contact" onClick={() => setIsOpen(false)} className="bg-blue-600 text-white px-6 py-3 rounded-lg text-center">Contacto</Link>
                     </div>
                 </div>
