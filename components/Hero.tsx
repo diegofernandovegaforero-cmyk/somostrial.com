@@ -26,9 +26,12 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                        <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                        <a
+                            href="#services"
+                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                        >
                             Explorar Servicios <ArrowRight className="w-5 h-5" />
-                        </button>
+                        </a>
                         <a
                             href="https://wa.me/573123299053"
                             target="_blank"
