@@ -131,16 +131,23 @@ export default function Hero() {
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
                         }}>
-                            {'Visión Digital'.split('').map((char, index) => (
-                                <motion.span
-                                    key={index}
-                                    className="inline-block"
-                                    animate={['i', 'í'].includes(char) ? { y: [0, -8, 0] } : {}}
-                                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: index * 0.1 }}
-                                >
-                                    {char === ' ' ? '\u00A0' : char}
-                                </motion.span>
-                            ))}
+                            {'Visión Digital'.split('').map((char, index) => {
+                                const isAnimated = ['i', 'í'].includes(char);
+                                return (
+                                    <motion.span
+                                        key={index}
+                                        className={isAnimated ? "inline-block" : "inline"}
+                                        style={isAnimated ? {
+                                            WebkitTextFillColor: '#7C3AED',
+                                            color: '#7C3AED'
+                                        } : undefined}
+                                        animate={isAnimated ? { y: [0, -8, 0] } : {}}
+                                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: index * 0.1 }}
+                                    >
+                                        {char === ' ' ? '\u00A0' : char}
+                                    </motion.span>
+                                );
+                            })}
                         </span>
                     </motion.h1>
 
