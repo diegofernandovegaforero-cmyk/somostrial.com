@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ParticleBackground from "@/components/ParticleBackground";
+import ScrollThemeProvider from "@/components/ScrollThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,8 @@ export default function RootLayout({
     return (
         <html lang="es">
             <body className={inter.className} style={{ position: 'relative' }}>
+                {/* Proveedor de tema oscuro al hacer scroll */}
+                <ScrollThemeProvider />
                 {/* Fondo animado de partículas — marca de agua fija en toda la página */}
                 <ParticleBackground />
                 {/* Contenido principal sobre el fondo */}
