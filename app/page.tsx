@@ -3,11 +3,13 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 import { MessageCircle } from "lucide-react";
 
 export default function Home() {
     return (
         <main className="relative z-10">
+            <CustomCursor />
             <Navbar />
             <Hero />
             <Services />
