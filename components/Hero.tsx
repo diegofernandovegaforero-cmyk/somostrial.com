@@ -212,13 +212,14 @@ export default function Hero() {
                                 {[...Array(4)].map((_, i) => (
                                     <motion.div
                                         key={i}
-                                        className="w-10 h-10 rounded-full border-2 border-white bg-[#6C5CE7]"
+                                        className="w-10 h-10 rounded-full border-2 border-white"
+                                        style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #7C3AED 50%, #E11D48 100%)' }}
                                         animate={{ y: [0, -4, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
                                     />
                                 ))}
                             </div>
-                            <span className="text-[#1A2B4C]">+500 Empresarios Confiaron</span>
+                            <span className="text-[#1A2B4C]">+100 Empresarios Confiaron</span>
                         </div>
 
                         {/* Resultados */}
