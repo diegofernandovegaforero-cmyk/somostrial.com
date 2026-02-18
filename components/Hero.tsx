@@ -102,7 +102,7 @@ export default function Hero() {
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                         <a
                             href="#services"
-                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             Explorar Servicios <ArrowRight className="w-5 h-5" />
                         </a>
