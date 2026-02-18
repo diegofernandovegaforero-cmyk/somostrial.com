@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video, Filter, Zap, Mouse } from 'lucide-react';
+import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video, Filter, Zap } from 'lucide-react';
 import WavesBackground from './WavesBackground';
 
 // ─── Paleta Digitrial ─────────────────────────────────────────────────────────
@@ -227,14 +227,8 @@ export default function Hero() {
                             <span className="text-[#1A2B4C]">Resultados en 30 días</span>
                         </div>
 
-                        {/* Mouse Animado */}
-                        <motion.div
-                            className="ml-auto pr-8 hidden md:block"
-                            animate={{ y: [0, 10, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            <Mouse className="w-6 h-6 text-slate-400" />
-                        </motion.div>
+
+                        {/* Mouse Animado Eliminado */}
                     </motion.div>
                 </motion.div>
 
