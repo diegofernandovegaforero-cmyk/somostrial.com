@@ -194,50 +194,6 @@ html {
   animation: scaleIn 0.8s ease-out forwards;
 }
 
-/* ── Footer Exception: Fondo blanco y textos oscuros (excepto tarjeta interna) ── */
-body.page-dark footer {
-  background: #ffffff !important;
-}
-
-/* Títulos de columnas (h4) */
-body.page-dark footer h4 {
-  color: #94a3b8 !important;
-  /* slate-400 */
-}
-
-/* Enlaces de navegación en listas */
-body.page-dark footer ul a,
-body.page-dark footer ul span {
-  color: #64748b !important;
-  /* slate-500 */
-}
-
-/* Párrafo de descripción (columna izquierda) */
-body.page-dark footer p.text-slate-500 {
-  color: #64748b !important;
-}
-
-/* Texto de copyright */
-body.page-dark footer .text-slate-600 {
-  color: #475569 !important;
-  /* slate-600 */
-}
-
-/* Iconos de redes sociales */
-body.page-dark footer .text-slate-400 {
-  color: #94a3b8 !important;
-}
 
 /* ── Restaurar estilos de la tarjeta interna oscura ──────────────────────── */
 /* El título h2 ya es blanco por defecto */
-
-/* Párrafo dentro de la tarjeta ("En Digitrial...") */
-body.page-dark footer .bg-gradient-to-br p {
-  color: #94a3b8 !important;
-  /* slate-400 */
-}
-
-/* Botones dentro de la tarjeta */
-body.page-dark footer .bg-gradient-to-br a {
-  color: #ffffff !important;
-}
