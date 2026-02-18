@@ -24,14 +24,14 @@ interface BinaryLabel {
 
 // ─── Configuración ────────────────────────────────────────────────────────────
 const CONFIG = {
-    particleCount: 55,          // número de aros
+    particleCount: 65,          // número de aros
     maxSpeed: 0.35,             // velocidad máxima (lento = marca de agua)
-    connectionDistance: 160,    // distancia máxima para dibujar línea
-    lineOpacity: 0.12,          // opacidad de las líneas de conexión
-    ringOpacity: 0.18,          // opacidad base de los aros
+    connectionDistance: 170,    // distancia máxima para dibujar línea
+    lineOpacity: 0.28,          // opacidad de las líneas de conexión
+    ringOpacity: 0.45,          // opacidad base de los aros
     mouseAttractionRadius: 180, // radio de atracción del mouse
     mouseAttractionForce: 0.012,// fuerza de atracción
-    binarySpawnRate: 0.004,     // probabilidad por frame de generar texto binario
+    binarySpawnRate: 0.006,     // probabilidad por frame de generar texto binario
     binaryLifeFrames: 90,       // duración del texto binario en frames
     glowColors: [
         '#00d4ff', // cian
@@ -208,7 +208,7 @@ export default function ParticleBackground() {
                 }
 
                 ctx.save();
-                ctx.globalAlpha = label.alpha * 0.35; // muy sutil
+                ctx.globalAlpha = label.alpha * 0.65; // visible pero sutil
                 ctx.font = `9px 'Courier New', monospace`;
                 ctx.fillStyle = '#00d4ff';
                 ctx.fillText(label.text, label.x, label.y);
