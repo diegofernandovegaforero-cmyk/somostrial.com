@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video } from 'lucide-react';
+import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video, Search } from 'lucide-react';
 import WavesBackground from './WavesBackground';
 
 // ─── Paleta Digitrial ─────────────────────────────────────────────────────────
@@ -26,57 +26,55 @@ function useCounter(target: number, duration: number = 1500) {
     return { count, ref };
 }
 
-// ─── Datos del carrusel de portafolio ─────────────────────────────────────────
+// ─── Datos del grid de servicios ──────────────────────────────────────────────
 const portfolioCards = [
     {
-        title: 'Diseño Web Premium',
-        metric: 'UX/UI de Alto Impacto',
-        tag: 'Web Design',
+        title: 'Diseño Web',
+        metric: 'UX/UI',
+        tag: 'Premium',
         bg: 'from-[#0d1b33] to-[#1A2B4C]',
         accent: '#2ED573',
         Icon: Layers,
-        desc: 'Sitios web corporativos veloces, seguros y optimizados para conversión.',
-        bars: [85, 90, 75, 95, 80, 88, 92],
     },
     {
         title: 'Tienda Online',
-        metric: 'Ventas Automatizadas',
-        tag: 'E-Commerce',
+        metric: 'Ventas',
+        tag: 'E-Comm',
         bg: 'from-[#1A2B4C] to-[#2d1b6e]',
         accent: '#6C5CE7',
         Icon: ShoppingBag,
-        desc: 'Plataformas de venta robustas con pasarelas de pago y logística integrada.',
-        bars: [65, 80, 55, 90, 70, 95, 75],
     },
     {
-        title: 'Estrategia Social Media',
-        metric: '+300% Engagement',
-        tag: 'Marketing',
+        title: 'Social Media',
+        metric: '+300%',
+        tag: 'Growth',
         bg: 'from-[#0d1b33] to-[#1A2B4C]',
         accent: '#2ED573',
         Icon: Share2,
-        desc: 'Gestión de comunidades y contenido viral que conecta con tu audiencia.',
-        bars: [50, 65, 80, 72, 88, 76, 92],
     },
     {
-        title: 'Talento Humano & SST',
-        metric: 'Cumplimiento 100%',
-        tag: 'Consultoría',
+        title: 'Talento Humano',
+        metric: '100%',
+        tag: 'SST',
         bg: 'from-[#1A2B4C] to-[#2d1b6e]',
         accent: '#6C5CE7',
         Icon: Users,
-        desc: 'Asesoría integral en seguridad, salud en el trabajo y gestión de personal.',
-        bars: [90, 85, 92, 88, 95, 90, 98],
     },
     {
-        title: 'Producción Audiovisual',
-        metric: 'Calidad 4K Cinema',
+        title: 'Producción',
+        metric: '4K Cinema',
         tag: 'Media',
         bg: 'from-[#0d1b33] to-[#1A2B4C]',
         accent: '#2ED573',
         Icon: Video,
-        desc: 'Videos corporativos, spots publicitarios y fotografía profesional.',
-        bars: [70, 82, 75, 88, 92, 85, 95],
+    },
+    {
+        title: 'SEO & Google',
+        metric: 'Ranking #1',
+        tag: 'Traffic',
+        bg: 'from-[#1A2B4C] to-[#2d1b6e]',
+        accent: '#6C5CE7',
+        Icon: Search,
     },
 ];
 
@@ -93,26 +91,6 @@ const itemVariants = {
 // ─── Componente principal ─────────────────────────────────────────────────────
 export default function Hero() {
     const { count, ref: counterRef } = useCounter(135);
-    const [activeCard, setActiveCard] = useState(0);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-    // Auto-play del carrusel
-    useEffect(() => {
-        if (!isAutoPlaying) return;
-        const timer = setInterval(() => {
-            setActiveCard(prev => (prev + 1) % portfolioCards.length);
-        }, 3200);
-        return () => clearInterval(timer);
-    }, [isAutoPlaying]);
-
-    function prev() {
-        setIsAutoPlaying(false);
-        setActiveCard(p => (p - 1 + portfolioCards.length) % portfolioCards.length);
-    }
-    function next() {
-        setIsAutoPlaying(false);
-        setActiveCard(p => (p + 1) % portfolioCards.length);
-    }
 
     return (
         <section className="pt-28 pb-20 px-6 lg:pt-36 relative overflow-hidden"
@@ -208,130 +186,57 @@ export default function Hero() {
                             <p className="text-4xl font-extrabold leading-none" style={{ color: '#2ED573' }}>
                                 +<span ref={counterRef}>{count}</span>%
                             </p>
-                            <p className="text-[10px] font-bold uppercase tracking-widest mt-1" style={{ color: '#1A2B4C' }}>Confianza Comprobada</p>
+                            <p className="text-sm font-bold uppercase tracking-widest mt-1" style={{ color: '#1A2B4C' }}>Confianza Total</p>
                         </div>
                     </motion.div>
                 </motion.div>
 
-                {/* ── COLUMNA DERECHA — Carrusel de portafolio ─────────── */}
+                {/* ── COLUMNA DERECHA — Grid 3x2 de tarjetas ─────────── */}
                 <motion.div
-                    className="relative"
+                    className="grid grid-cols-2 md:grid-cols-3 gap-4"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}>
 
-                    {/* Tarjeta principal activa */}
-                    <div className="relative" style={{ perspective: '1000px' }}>
-                        {portfolioCards.map((card, i) => (
-                            <motion.div
-                                key={i}
-                                className={`rounded-3xl overflow-hidden shadow-2xl border border-white/10 ${i === activeCard ? 'block' : 'hidden'}`}
-                                initial={{ opacity: 0, rotateY: -8, scale: 0.96 }}
-                                animate={{ opacity: 1, rotateY: 0, scale: 1 }}
-                                transition={{ duration: 0.5, ease: 'easeOut' }}
-                                style={{ transformStyle: 'preserve-3d' }}>
+                    {portfolioCards.map((card, i) => (
+                        <motion.div
+                            key={i}
+                            className="bg-white rounded-2xl p-4 shadow-xl border border-white/20 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}>
 
-                                {/* Fondo degradado oscuro */}
-                                <div className={`bg-gradient-to-br ${card.bg} p-8 min-h-[360px] flex flex-col justify-between relative overflow-hidden`}>
+                            {/* Fondo gradiente oscuro */}
+                            <div className={`absolute inset-0 bg-gradient-to-br ${card.bg} -z-10`} />
 
-                                    {/* Grid lines sutiles — dinamismo minimalista */}
-                                    <div className="absolute inset-0 opacity-[0.06]" style={{
-                                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-                                        backgroundSize: '40px 40px',
-                                    }} />
+                            {/* Decoración */}
+                            <div className="absolute top-0 right-0 w-24 h-24 rounded-full opacity-[0.15]"
+                                style={{ background: `radial-gradient(circle, ${card.accent}, transparent)`, transform: 'translate(40%, -40%)' }} />
 
-                                    {/* Glow radial de acento */}
-                                    <div className="absolute top-0 right-0 w-72 h-72 rounded-full opacity-[0.12]"
-                                        style={{ background: `radial-gradient(circle, ${card.accent}, transparent)`, transform: 'translate(35%, -35%)' }} />
-
-                                    {/* Barras de datos animadas — fondo dinámico */}
-                                    <div className="absolute bottom-16 right-6 flex items-end gap-1 opacity-[0.18]">
-                                        {card.bars.map((h, bi) => (
-                                            <motion.div key={bi}
-                                                className="w-2 rounded-t-sm"
-                                                style={{ background: card.accent }}
-                                                initial={{ height: 0 }}
-                                                animate={{ height: `${h * 0.7}px` }}
-                                                transition={{ duration: 0.8, delay: bi * 0.07, ease: 'easeOut' }}
-                                            />
-                                        ))}
+                            {/* Contenido compacto */}
+                            <div className="flex flex-col h-full justify-between gap-3">
+                                <div className="flex items-start justify-between">
+                                    <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/10 border border-white/10">
+                                        <card.Icon className="w-4 h-4 text-white" />
                                     </div>
+                                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/10">
+                                        {card.tag}
+                                    </span>
+                                </div>
 
-                                    {/* Header */}
-                                    <div className="relative z-10">
-                                        <div className="flex items-start justify-between mb-6">
-                                            {/* Icono Lucide minimalista */}
-                                            <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                                                style={{ background: `${card.accent}18`, border: `1px solid ${card.accent}30` }}>
-                                                <card.Icon className="w-5 h-5" style={{ color: card.accent }} strokeWidth={1.5} />
-                                            </div>
-                                            <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wide"
-                                                style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                                                {card.tag}
-                                            </span>
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">{card.title}</h3>
-                                        <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>{card.desc}</p>
-                                    </div>
-
-                                    {/* Métrica */}
-                                    <div className="relative z-10 mt-6">
-                                        <div className="flex items-center justify-between bg-white/[0.07] backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/[0.08]">
-                                            <div className="flex items-center gap-1.5">
-                                                {[...Array(5)].map((_, s) => (
-                                                    <Star key={s} className="w-3 h-3 fill-current" style={{ color: card.accent }} />
-                                                ))}
-                                            </div>
-                                            <span className="text-lg font-bold tracking-tight" style={{ color: card.accent }}>{card.metric}</span>
-                                        </div>
+                                <div>
+                                    <h3 className="text-sm font-bold text-white leading-tight mb-1">{card.title}</h3>
+                                    <div className="flex items-center gap-1">
+                                        <Star className="w-2.5 h-2.5 fill-current" style={{ color: card.accent }} />
+                                        <span className="text-xs font-bold" style={{ color: card.accent }}>{card.metric}</span>
                                     </div>
                                 </div>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    {/* Controles del carrusel */}
-                    <div className="flex items-center justify-between mt-5 px-1">
-                        {/* Dots */}
-                        <div className="flex gap-2">
-                            {portfolioCards.map((_, i) => (
-                                <button key={i}
-                                    onClick={() => { setIsAutoPlaying(false); setActiveCard(i); }}
-                                    className="rounded-full transition-all duration-300"
-                                    style={{
-                                        width: i === activeCard ? '24px' : '8px',
-                                        height: '8px',
-                                        background: i === activeCard ? '#1A2B4C' : 'rgba(26,43,76,0.25)',
-                                    }}
-                                    aria-label={`Ir a tarjeta ${i + 1}`}
-                                />
-                            ))}
-                        </div>
-
-                        {/* Flechas */}
-                        <div className="flex gap-2">
-                            <button onClick={prev}
-                                className="w-10 h-10 rounded-full flex items-center justify-center border-2 hover:-translate-y-0.5 transition-all duration-200 shadow-md"
-                                style={{ borderColor: '#1A2B4C', color: '#1A2B4C', background: 'white' }}
-                                aria-label="Anterior">
-                                <ChevronLeft className="w-5 h-5" />
-                            </button>
-                            <button onClick={next}
-                                className="w-10 h-10 rounded-full flex items-center justify-center text-white hover:-translate-y-0.5 transition-all duration-200 shadow-md"
-                                style={{ background: '#1A2B4C' }}
-                                aria-label="Siguiente">
-                                <ChevronRight className="w-5 h-5" />
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Tarjetas apiladas detrás (efecto profundidad) */}
-                    <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl -z-10 opacity-30"
-                        style={{ background: 'linear-gradient(135deg, #6C5CE7, #1A2B4C)', transform: 'rotate(2deg)' }} />
-                    <div className="absolute -bottom-6 -right-6 w-full h-full rounded-3xl -z-20 opacity-15"
-                        style={{ background: 'linear-gradient(135deg, #2ED573, #1A2B4C)', transform: 'rotate(4deg)' }} />
+                            </div>
+                        </motion.div>
+                    ))}
                 </motion.div>
             </div>
         </section>
     );
 }
+
