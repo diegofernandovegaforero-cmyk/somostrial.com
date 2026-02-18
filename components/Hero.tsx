@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video, Search } from 'lucide-react';
+import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Star, ShoppingBag, Layers, Share2, Users, Video, Filter } from 'lucide-react';
 import WavesBackground from './WavesBackground';
 
 // ─── Paleta Digitrial ─────────────────────────────────────────────────────────
@@ -69,12 +69,12 @@ const portfolioCards = [
         Icon: Video,
     },
     {
-        title: 'SEO & Google',
-        metric: 'Ranking #1',
-        tag: 'Traffic',
+        title: 'Embudo de Ventas',
+        metric: 'Leads x10',
+        tag: 'Strategy',
         bg: 'from-[#1A2B4C] to-[#2d1b6e]',
         accent: '#6C5CE7',
-        Icon: Search,
+        Icon: Filter,
     },
 ];
 
@@ -126,7 +126,7 @@ export default function Hero() {
                         style={{ color: '#1A2B4C' }}>
                         Impulsamos tu{' '}
                         <span className="block" style={{
-                            background: 'linear-gradient(90deg, #1A2B4C 0%, #6C5CE7 60%, #a78bfa 100%)',
+                            background: 'linear-gradient(90deg, #1E3A8A 0%, #7C3AED 45%, #E11D48 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
