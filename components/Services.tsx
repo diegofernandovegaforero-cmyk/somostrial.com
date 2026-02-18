@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useMotionValue, useTransform, useSpring, useInView } from 'framer-motion';
 import { Code, Layout, Filter, Smartphone, Users, Video } from 'lucide-react';
+import WavesBackground from './WavesBackground';
 
 const services = [
     {
@@ -129,13 +130,15 @@ function TiltCard({ service, index }: { service: typeof services[0]; index: numb
     );
 }
 
+
 export default function Services() {
     const headerRef = useRef<HTMLDivElement>(null);
     const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
 
     return (
-        <section id="services" className="py-24 bg-white/55">
-            <div className="container mx-auto px-6">
+        <section id="services" className="py-24 bg-white/55 relative overflow-hidden">
+            <WavesBackground />
+            <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     ref={headerRef}
                     className="text-center mb-16 max-w-3xl mx-auto"

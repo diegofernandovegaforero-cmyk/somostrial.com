@@ -1,5 +1,6 @@
 'use client';
 import { useCountUp } from '@/hooks/useCountUp';
+import WavesBackground from './WavesBackground';
 
 export default function About() {
     const projectsCount = useCountUp(50, 2000);
@@ -7,8 +8,9 @@ export default function About() {
     const commitmentCount = useCountUp(100, 2000);
 
     return (
-        <section className="py-24 px-6 bg-white/65 overflow-hidden">
-            <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <section className="py-24 px-6 bg-white/65 overflow-hidden relative">
+            <WavesBackground />
+            <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
                 <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group">
                     <video
                         autoPlay
