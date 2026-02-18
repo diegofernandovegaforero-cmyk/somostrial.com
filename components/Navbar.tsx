@@ -29,14 +29,21 @@ export default function Navbar() {
                     <Link href="#" className="text-blue-600 font-semibold">Inicio</Link>
                     <Link href="#services" className="hover:text-blue-600 transition text-gray-600">Servicios</Link>
                     <Link href="#services" className="hover:text-blue-600 transition text-gray-600">Tienda</Link>
+                    <Link href="#contact" className="hover:text-blue-600 transition text-gray-600">Contacto</Link>
+
+                    <div className="h-4 w-px bg-gray-200 mx-2"></div>
+
                     <Link href="#" className="text-gray-600 hover:text-blue-600 transition">
                         <ShoppingCart className="w-5 h-5" />
                     </Link>
+
                     <Link
-                        href="#contact"
-                        className="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        href="https://wa.me/573123299053"
+                        target="_blank"
+                        className="text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        style={{ background: 'linear-gradient(90deg, #1E3A8A 0%, #7C3AED 50%, #E11D48 100%)' }}
                     >
-                        Contacto
+                        Asesoría Premium Gratuita
                     </Link>
                 </div>
 
@@ -56,7 +63,12 @@ export default function Navbar() {
                         <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Inicio</Link>
                         <Link href="#services" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Servicios</Link>
                         <Link href="#services" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Tienda</Link>
-                        <Link href="#contact" onClick={() => setIsOpen(false)} className="bg-blue-600 text-white px-6 py-3 rounded-lg text-center">Contacto</Link>
+                        <Link href="#contact" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Contacto</Link>
+                        <Link href="https://wa.me/573123299053" onClick={() => setIsOpen(false)}
+                            className="text-white px-6 py-3 rounded-lg text-center font-bold"
+                            style={{ background: 'linear-gradient(90deg, #1E3A8A 0%, #7C3AED 50%, #E11D48 100%)' }}>
+                            Asesoría Premium Gratuita
+                        </Link>
                     </div>
                 </div>
             )}
