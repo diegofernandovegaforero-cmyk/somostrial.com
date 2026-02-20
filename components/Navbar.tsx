@@ -9,7 +9,6 @@ export default function Navbar() {
     return (
         <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Logo */}
                 <Link href="/" className="flex items-center">
                     <img
                         src="https://horizons-cdn.hostinger.com/6b9bdf39-faeb-49b5-9aef-94e01a05f6fc/64cb1933ae82848e86fed46062507d19.png"

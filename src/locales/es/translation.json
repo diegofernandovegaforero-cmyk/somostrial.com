@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "store": "Tienda",
+    "contact": "Contacto",
+    "cart": "Carrito"
+  },
+  "hero": {
+    "badge": "Innovación Digital en Colombia",
+    "title_start": "Impulsamos tu",
+    "title_highlight": "Visión Digital",
+    "description": "Somos el Centro de Soluciones que transforma desafíos complejos en oportunidades de crecimiento medibles a través de tecnología y estrategia.",
+    "cta_explore": "Explorar Servicios",
+    "cta_whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "description": "Transformando ideas en experiencias digitales excepcionales. Tu socio estratégico para el crecimiento en la era moderna.",
+    "services": "Servicios",
+    "company": "Compañía",
+    "contact": "Contacto",
+    "rights": "© 2026 {{brandName}}. Todos los derechos reservados.",
+    "tagline": "\"DE SOMOSTRIAL: CENTRO DE SOLUCIONES\""
+  },
+  "services": {
+    "web": "Desarrollo Web",
+    "landing": "Landing Pages",
+    "funnels": "Funnels de Venta",
+    "social": "Redes Sociales",
+    "hr": "Talento Humano y SST",
+    "branding": "Posicionamiento de Marca",
+    "title": "Nuestras Soluciones",
+    "subtitle": "Todo lo que necesitas para escalar"
+  },
+  "common": {
+    "contact_us": "Contáctanos",
+    "buy_now": "Comprar Ahora",
+    "view_more": "Ver más",
+    "price": "Precio",
+    "popular": "MÁS POPULAR",
+    "coming_soon_title": "🚧 ¡Próximamente!",
+    "coming_soon_desc": "Aún no hemos añadido esto. ¡Pídelo en tu próximo prompt! 🚀",
+    "feature_not_implemented": "🚧 Esta función aún no está implementada",
+    "feature_request": "¡Pero no te preocupes! Puedes solicitarla en tu próximo prompt! 🚀"
+  },
+  "store": {
+    "title": "Nuestra Tienda",
+    "subtitle": "Encuentra las soluciones digitales perfectas para potenciar tu negocio.",
+    "back": "Volver a la Tienda",
+    "add_to_cart": "Agregar al Carrito",
+    "style": "Estilo",
+    "in_stock": "en stock!",
+    "no_stock": "Sin stock suficiente.",
+    "unavailable": "No disponible"
+  },
+  "success": {
+    "title": "¡Gracias por tu compra!",
+    "message": "Tu pedido ha sido procesado exitosamente. Recibirás un correo electrónico de confirmación en breve.",
+    "continue": "Seguir Comprando"
+  }
+}

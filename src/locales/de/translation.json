@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "store": "Shop",
+    "contact": "Kontakt",
+    "cart": "Warenkorb"
+  },
+  "hero": {
+    "badge": "Digitale Innovation in Kolumbien",
+    "title_start": "Wir Stärken Ihre",
+    "title_highlight": "Digitale Vision",
+    "description": "Wir sind das Lösungszentrum, das komplexe Herausforderungen durch Technologie und Strategie in messbare Wachstumschancen verwandelt.",
+    "cta_explore": "Dienstleistungen",
+    "cta_whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "description": "Ideen in außergewöhnliche digitale Erlebnisse verwandeln. Ihr strategischer Partner für Wachstum in der modernen Ära.",
+    "services": "Dienstleistungen",
+    "company": "Unternehmen",
+    "contact": "Kontakt",
+    "rights": "© 2025 {{brandName}}. Alle Rechte vorbehalten.",
+    "tagline": "\"VON {{brandName}}: LÖSUNGSZENTRUM\""
+  },
+  "services": {
+    "web": "Webentwicklung",
+    "landing": "Landing Pages",
+    "funnels": "Verkaufstrichter",
+    "social": "Soziale Medien",
+    "hr": "Personalwesen & SST",
+    "branding": "Markenbildung",
+    "title": "Unsere Lösungen",
+    "subtitle": "Alles, was Sie zum Skalieren benötigen"
+  },
+  "common": {
+    "contact_us": "Kontaktieren Sie uns",
+    "buy_now": "Jetzt Kaufen",
+    "view_more": "Mehr sehen",
+    "price": "Preis",
+    "popular": "BELIEBTESTE",
+    "coming_soon_title": "🚧 Demnächst!",
+    "coming_soon_desc": "Wir haben dies noch nicht hinzugefügt. Fragen Sie beim nächsten Prompt danach! 🚀",
+    "feature_not_implemented": "🚧 Diese Funktion ist noch nicht implementiert",
+    "feature_request": "Aber keine Sorge! Sie können es in Ihrem nächsten Prompt anfordern! 🚀"
+  },
+  "store": {
+    "title": "Unser Shop",
+    "subtitle": "Finden Sie die perfekten digitalen Lösungen, um Ihr Geschäft voranzutreiben.",
+    "back": "Zurück zum Shop",
+    "add_to_cart": "In den Warenkorb",
+    "style": "Stil",
+    "in_stock": "auf Lager!",
+    "no_stock": "Nicht genügend Lagerbestand.",
+    "unavailable": "Derzeit nicht verfügbar"
+  },
+  "success": {
+    "title": "Danke für Ihre Bestellung!",
+    "message": "Ihre Bestellung wurde erfolgreich bearbeitet. Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+    "continue": "Weiter Einkaufen"
+  }
+}
