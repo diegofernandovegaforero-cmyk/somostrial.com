@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Star, ArrowRight, Shield, Rocket } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/use-toast';
+import { Button } from '@/src/components/ui/button';
+import { useToast } from '@/src/components/ui/use-toast';
 
 export default function Home() {
     const { toast } = useToast();
