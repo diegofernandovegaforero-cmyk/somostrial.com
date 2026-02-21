@@ -6,6 +6,7 @@ import ScrollThemeProvider from "@/components/ScrollThemeProvider";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/Toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
                 </div>
                 {/* Footer global */}
                 <Footer />
+                {/* Notificaciones (Toasts) */}
+                <Toaster />
             </body>
         </html>
     );

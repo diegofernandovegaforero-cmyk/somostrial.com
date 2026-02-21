@@ -1,3 +1,5 @@
+'use client';
+
 import {
 	Toast,
 	ToastClose,
@@ -5,7 +7,7 @@ import {
 	ToastProvider,
 	ToastTitle,
 	ToastViewport,
-} from '@/components/ui/toast';
+} from '@/components/ui/Toast';
 import { useToast } from '@/components/ui/use-toast';
 import React from 'react';
 
