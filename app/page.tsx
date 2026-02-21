@@ -37,9 +37,9 @@ export default function Home() {
     ];
 
     return (
-        <div className="bg-slate-950 min-h-screen pt-32 pb-24 font-sans text-slate-50 relative overflow-hidden">
-            {/* Promo Banner */}
-            <div className="fixed top-0 left-0 w-full z-50">
+        <div className="bg-slate-950 min-h-screen pt-20 pb-24 font-sans text-slate-50 relative overflow-hidden">
+            {/* Promo Banner - Moved to be below Navbar */}
+            <div className="w-full z-40 relative">
                 <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border-b border-emerald-500/30 py-2 text-center backdrop-blur-md">
                     <p className="text-emerald-400 text-sm font-semibold tracking-wide">
                         🚀 OFERTA ESPECIAL DISPONIBLE SOLO HASTA MARZO 2026

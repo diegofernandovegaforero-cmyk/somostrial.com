@@ -4,6 +4,9 @@ import "./globals.css";
 import ParticleBackground from "@/components/ParticleBackground";
 import ScrollThemeProvider from "@/components/ScrollThemeProvider";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,8 +20,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="es">
+        <html lang="es" className="scroll-smooth">
             <body className={inter.className} style={{ position: 'relative' }}>
+                {/* Navbar global */}
+                <Navbar />
                 {/* Proveedor de tema oscuro al hacer scroll */}
                 <ScrollThemeProvider />
                 {/* Fondo animado de partículas — marca de agua fija en toda la página */}
@@ -27,6 +32,8 @@ export default function RootLayout({
                 <div style={{ position: 'relative', zIndex: 1 }}>
                     {children}
                 </div>
+                {/* Footer global */}
+                <Footer />
             </body>
         </html>
     );
