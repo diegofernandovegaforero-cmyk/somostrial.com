@@ -22,19 +22,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className="scroll-smooth">
-            <body className={inter.className} style={{ position: 'relative' }}>
-                {/* Navbar global */}
-                <Navbar />
-                {/* Proveedor de tema oscuro al hacer scroll */}
-                <ScrollThemeProvider />
-                {/* Fondo animado de partículas — marca de agua fija en toda la página */}
-                <ParticleBackground />
-                {/* Contenido principal sobre el fondo */}
+            <body className={inter.className} style={{ position: 'relative', backgroundColor: 'black' }}>
+                {/* Contenido principal */}
                 <div style={{ position: 'relative', zIndex: 1 }}>
                     {children}
                 </div>
-                {/* Footer global */}
-                <Footer />
                 {/* Notificaciones (Toasts) */}
                 <Toaster />
             </body>

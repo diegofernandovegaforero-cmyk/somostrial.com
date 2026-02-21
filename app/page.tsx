@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Zap, Star, ArrowRight, Shield, Rocket } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useToast } from '@/components/ui/use-toast';
+import Image from 'next/image';
 
 export default function Home() {
     const { toast } = useToast();
@@ -16,175 +17,118 @@ export default function Home() {
         });
     };
 
-    const proFeatures = [
-        "Diseño web personalizado y responsive",
-        "Optimización SEO básica",
-        "Integración con redes sociales",
-        "Formulario de contacto avanzado",
-        "Certificado SSL incluido",
-        "Soporte técnico por correo electrónico",
-        "Hasta 5 páginas internas"
-    ];
-
-    const vipFeatures = [
-        "Todo lo incluido en el Plan PRO",
-        "E-commerce integrado (hasta 50 productos)",
-        "Pasarela de pagos configurada",
-        "Optimización SEO avanzada",
-        "Sistema de reservas o citas online",
-        "Soporte técnico prioritario 24/7",
-        "Mantenimiento mensual incluido (1 año)"
-    ];
-
     return (
-        <div className="bg-slate-950 min-h-screen pt-20 pb-24 font-sans text-slate-50 relative overflow-hidden">
-            {/* Promo Banner - Moved to be below Navbar */}
-            <div className="w-full z-40 relative">
-                <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border-b border-emerald-500/30 py-2 text-center backdrop-blur-md">
-                    <p className="text-emerald-400 text-sm font-semibold tracking-wide">
-                        🚀 OFERTA ESPECIAL DISPONIBLE SOLO HASTA MARZO 2026
-                    </p>
-                </div>
-            </div>
-
-            {/* Background Effects */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#0052CC]/20 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <motion.h1
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight"
-                    >
-                        Lleva tu negocio al siguiente nivel en <span className="text-emerald-400">Marzo 2026</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-lg md:text-xl text-slate-400"
-                    >
-                        Soluciones escalables diseñadas para maximizar tu presencia digital y aumentar tus ventas.
-                    </motion.p>
+        <div className="bg-black min-h-screen pt-24 pb-16 font-sans text-white relative overflow-hidden flex flex-col items-center">
+            {/* Header / Logo Section */}
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-12 text-center"
+            >
+                <div className="flex items-center justify-center gap-3 mb-8">
+                    {/* Simulated Logo based on user image */}
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[14px] border-b-white"></div>
+                    </div>
+                    <span className="text-2xl font-bold tracking-tight">
+                        DIGI<span className="text-blue-500">TRIAL</span>
+                    </span>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {/* Plan PRO Card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="relative bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 md:p-10 shadow-2xl hover:border-emerald-500/30 transition-all duration-300 group flex flex-col h-full"
-                    >
-                        <div className="absolute top-0 right-0 p-6">
-                            <span className="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/20">
-                                Más vendido
-                            </span>
-                        </div>
+                <p className="text-emerald-400 text-sm font-semibold tracking-wide uppercase mb-2">
+                    ¡Consulta inmediata GRATIS!
+                </p>
+                <h2 className="text-lg md:text-xl font-medium text-gray-300">
+                    Elige el plan que hará crecer tu negocio en línea:
+                </h2>
+            </motion.div>
 
-                        <div className="mb-8">
-                            <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform duration-300">
-                                <Zap className="w-7 h-7" />
-                            </div>
-                            <h3 className="text-3xl font-bold text-white mb-2">Plan <span className="text-gray-400">PRO</span></h3>
-                            <p className="text-slate-400">La solución perfecta para establecer tu presencia digital profesional.</p>
-                        </div>
+            {/* Pricing Cards Container */}
+            <div className="container mx-auto px-6 max-w-5xl grid md:grid-cols-2 gap-8 items-stretch">
+                {/* Plan PRO Card */}
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="relative bg-[#111111] border border-gray-800 rounded-2xl p-1 shadow-2xl group"
+                >
+                    {/* Badge */}
+                    <div className="absolute -top-3 right-8 z-20">
+                        <span className="bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+                            Más vendido
+                        </span>
+                    </div>
 
-                        <div className="flex-grow">
-                            <ul className="space-y-4 mb-8">
-                                {proFeatures.map((feature, idx) => (
-                                    <li key={idx} className="flex items-start text-slate-300">
-                                        <div className="mt-1 mr-3 bg-emerald-500/20 rounded-full p-1 shrink-0">
-                                            <Check className="w-4 h-4 text-emerald-500" />
-                                        </div>
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                    <div className="p-8 h-full flex flex-col">
+                        <h3 className="text-3xl font-bold mb-6">Plan <span className="text-emerald-500">PRO</span></h3>
+
+                        <div className="bg-[#1a1a1a] rounded-xl p-6 border border-gray-800/50 flex items-start gap-4 mb-8">
+                            <span className="text-2xl mt-1">👉</span>
+                            <p className="text-gray-300 leading-relaxed">
+                                Ideal si quieres una página web <span className="text-white font-bold italic underline decoration-emerald-500/50">moderna, rápida y lista</span> para vender en poco tiempo, con la inversión <span className="text-white font-bold underline decoration-emerald-500/50 tracking-tight">más accesible</span>
+                            </p>
                         </div>
 
                         <Button
                             onClick={() => handleSelectPlan('Plan PRO')}
-                            className="w-full bg-[#0052CC] hover:bg-[#003d99] text-white py-6 text-lg rounded-xl shadow-lg shadow-[#0052CC]/20 hover:shadow-[#0052CC]/40 transition-all group-hover:-translate-y-1 mt-auto"
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02] active:scale-95"
                         >
-                            Comenzar con PRO <ArrowRight className="ml-2 w-5 h-5" />
+                            Seleccionar Plan PRO <ArrowRight className="w-5 h-5" />
                         </Button>
-                    </motion.div>
+                    </div>
+                </motion.div>
 
-                    {/* Plan VIP Card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="relative bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-[#0052CC]/30 rounded-3xl p-8 md:p-10 shadow-2xl hover:border-[#0052CC]/60 transition-all duration-300 group flex flex-col h-full"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#0052CC]/5 to-emerald-500/5 rounded-3xl pointer-events-none"></div>
+                {/* Plan VIP Card */}
+                <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="relative bg-[#111111] border border-gray-800 rounded-2xl p-1 shadow-2xl group"
+                >
+                    {/* Badge */}
+                    <div className="absolute -top-3 right-8 z-20">
+                        <span className="bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+                            + $850 USD
+                        </span>
+                    </div>
 
-                        <div className="absolute top-0 right-0 p-6">
-                            <span className="bg-[#0052CC]/20 text-blue-300 text-sm font-bold px-4 py-1.5 rounded-full border border-[#0052CC]/30">
-                                +$850 USD
-                            </span>
-                        </div>
+                    <div className="p-8 h-full flex flex-col">
+                        <h3 className="text-3xl font-bold mb-6 text-emerald-500">Plan <span className="text-white">VIP</span></h3>
 
-                        <div className="mb-8 relative z-10">
-                            <div className="w-14 h-14 bg-[#0052CC]/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                                <Star className="w-7 h-7" />
-                            </div>
-                            <h3 className="text-3xl font-bold text-white mb-2 flex items-center gap-2">
-                                Plan VIP <Shield className="w-6 h-6 text-emerald-400" />
-                            </h3>
-                            <p className="text-slate-400">Potencia total para negocios listos para escalar y vender online.</p>
-                        </div>
-
-                        <div className="flex-grow relative z-10">
-                            <ul className="space-y-4 mb-8">
-                                {vipFeatures.map((feature, idx) => (
-                                    <li key={idx} className="flex items-start text-slate-300">
-                                        <div className="mt-1 mr-3 bg-[#0052CC]/20 rounded-full p-1 shrink-0">
-                                            <Check className="w-4 h-4 text-blue-400" />
-                                        </div>
-                                        <span className={idx === 0 ? "font-semibold text-white" : ""}>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="bg-[#1a1a1a] rounded-xl p-6 border border-gray-800/50 flex items-start gap-4 mb-8">
+                            <span className="text-2xl mt-1">👉</span>
+                            <p className="text-gray-300 leading-relaxed">
+                                Ideal si buscas una página web con un <span className="text-white font-bold italic underline decoration-emerald-500/50 tracking-tight">diseño exclusivo y funcionalidades avanzadas</span> para elevar tu marca.
+                            </p>
                         </div>
 
                         <Button
                             onClick={() => handleSelectPlan('Plan VIP')}
-                            className="w-full relative z-10 bg-white text-slate-900 hover:bg-slate-100 py-6 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all group-hover:-translate-y-1 font-bold mt-auto"
+                            className="w-full bg-white text-black hover:bg-gray-100 py-6 text-lg rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02] active:scale-95 font-bold"
                         >
-                            Comenzar con VIP <Rocket className="ml-2 w-5 h-5 text-[#0052CC]" />
+                            Seleccionar Plan VIP <ArrowRight className="w-5 h-5" />
                         </Button>
-                    </motion.div>
-                </div>
-
-                {/* Trust Indicators below cards */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="mt-16 text-center"
-                >
-                    <p className="text-slate-500 text-sm font-medium uppercase tracking-widest mb-6">Garantías incluidas en todos los planes</p>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-                        <div className="flex items-center gap-2 text-slate-400">
-                            <Check className="w-5 h-5 text-emerald-500" />
-                            <span>Sin contratos forzosos</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-slate-400">
-                            <Check className="w-5 h-5 text-emerald-500" />
-                            <span>Soporte en español</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-slate-400">
-                            <Check className="w-5 h-5 text-emerald-500" />
-                            <span>Migración gratuita</span>
-                        </div>
                     </div>
                 </motion.div>
             </div>
+
+            {/* Footer / Partner Section */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="mt-20 flex flex-col items-center gap-4 opacity-70 hover:opacity-100 transition-opacity"
+            >
+                <div className="flex items-center gap-2 grayscale brightness-200">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-emerald-500" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.1 4.5c-.2 0-.4 0-.6.1-.2 0-.3.1-.4.2l-2.6 1.8c-.1-.1-.3-.2-.5-.3-.2-.1-.4-.1-.7-.1s-.5 0-.7.1c-.2.1-.4.2-.5.3l-2.6-1.8c-.1-.1-.3-.2-.4-.2-.2-.1-.4-.1-.6-.1-.5 0-1 .2-1.4.6-.4.4-.6.9-.6 1.4v14c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6.2 0 .4 0 .6-.1.2 0 .3-.1.4-.2l2.6-1.8c.1.1.3.2.5.3.2.1.4.1.7.1s.5 0 .7-.1c.2-.1.4-.2.5-.3l2.6 1.8c.1.1.3.2.4.2.2.1.4.1.6.1.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4v-14c.1-.5-.1-1-.5-1.4-.4-.4-.9-.6-1.4-.6zm-11 2c0-.3.1-.5.3-.7.2-.2.4-.3.7-.3.1 0 .2 0 .3.1l2.6 1.8V21.4c-.1 0-.2-.1-.3-.1-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7v-14zm5 14c-.1 0-.2 0-.3-.1l-1.6-1.1c-.1-.1-.2-.1-.4-.2-.2-.1-.3-.1-.5-.1s-.3 0-.5.1l-1.6 1.1c-.1 0-.2.1-.3.1s-.2 0-.4-.1c-.1 0-.1-.1-.2-.2v-11c0-.1 0-.2.1-.3l1.3-.9c.1.1.2.1.4.2.2.1.3.1.5.1s.3 0 .5-.1l1.3.9c.1.1.1.2.1.3v11c.1.1.1.2 0 .3zm6.3-1c0 .3-.1.5-.3.7-.2.2-.4.3-.7.3s-.2 0-.3-.1l-2.6-1.8v-14c.1 0 .2-.1.3-.1.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v14z" />
+                    </svg>
+                    <span className="text-sm font-light tracking-[0.2em] uppercase">
+                        shopify <span className="font-bold">partners</span>
+                    </span>
+                </div>
+            </motion.div>
         </div>
     );
 }
