@@ -28,16 +28,21 @@ export default function Home() {
             {/* --- Navbar --- */}
             <nav className={`fixed top-0 w-full z-50 p-4 transition-colors ${isDarkMode ? 'bg-[#00050f]/90 border-slate-800' : 'bg-white/80 border-gray-100'} backdrop-blur-md border-b`}>
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-2 cursor-pointer">
-                        {/* CSS Vector Logo */}
-                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-sm ${isDarkMode ? 'bg-slate-800 border-slate-700 border' : 'bg-slate-100 border-slate-200 border'}`}>
-                            {/* Inner Play/Triangle Icon */}
-                            <div className={`w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-b-[6px] border-b-transparent ml-1 ${isDarkMode ? 'border-l-slate-300' : 'border-l-slate-400'}`}></div>
+                    <div className="flex items-center gap-3 cursor-pointer">
+                        {/* Vector Logo */}
+                        <div className={`w-11 h-11 rounded-2xl flex items-center justify-center shadow-sm transition-colors ${isDarkMode ? 'bg-slate-800 border-slate-700 border-2' : 'bg-slate-100 border-slate-200 border-2'}`}>
+                            {/* Inner UP Triangle with Rounded Corners */}
+                            <svg width="22" height="18" viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={`transition-colors ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
+                                <path d="M10.27 1.61c.77-1.33 2.69-1.33 3.46 0l8.7 15.07c.77 1.33-.19 3.-1.73 3H3.3c-1.54 0-2.5-1.67-1.73-3L10.27 1.61z" />
+                            </svg>
                         </div>
-                        <div className="flex flex-col justify-center -space-y-1">
-                            <span className="text-2xl font-black tracking-tight flex items-center">
-                                <span className={isDarkMode ? 'text-blue-500' : 'text-blue-600'}>DIGI</span>
-                                <span className={isDarkMode ? 'text-slate-300' : 'text-slate-500'}>TRIAL</span>
+                        <div className="flex flex-col justify-center">
+                            <span className="text-2xl font-black tracking-tight flex items-center leading-none">
+                                <span className={`transition-colors ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>DIGI</span>
+                                <span className={`transition-colors ${isDarkMode ? 'text-slate-100' : 'text-slate-600'}`}>TRIAL</span>
+                            </span>
+                            <span className={`text-[10px] font-bold tracking-widest uppercase mt-1 transition-colors ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
+                                Somostrial
                             </span>
                         </div>
                     </div>
@@ -81,7 +86,7 @@ export default function Home() {
                             Somos el Centro de Soluciones que transforma desafíos complejos en oportunidades de crecimiento medibles a través de tecnología y estrategia.
                         </p>
                         <div className="flex flex-wrap items-center gap-4">
-                            <button className="bg-[#1e293b] hover:bg-[#0f172a] text-white px-8 py-6 rounded-xl text-md font-semibold flex items-center gap-2 shadow-lg shadow-slate-900/10 transition-transform hover:-translate-y-1">
+                            <button className={`px-8 py-6 rounded-xl text-md font-semibold flex items-center gap-2 shadow-lg transition-all hover:-translate-y-1 ${isDarkMode ? 'bg-slate-800 text-white hover:bg-slate-700 border border-slate-700' : 'bg-[#1e293b] text-white hover:bg-[#0f172a] shadow-slate-900/10'}`}>
                                 Explorar Servicios <ArrowRight className="w-5 h-5" />
                             </button>
                             <button className={`border px-8 py-6 rounded-xl text-md font-semibold flex items-center gap-2 shadow-sm transition-transform hover:-translate-y-1 ${isDarkMode ? 'border-slate-800 bg-[#0f172a]/50 text-slate-300 hover:bg-[#1e293b]' : 'border-gray-200 bg-white text-slate-800 hover:bg-gray-50'}`}>
@@ -370,8 +375,10 @@ export default function Home() {
                         {/* Central abstract UI element */}
                         <div className="relative z-10 w-64 h-80 bg-white border border-gray-200 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                             <div className="w-full flex justify-between items-center mb-2">
-                                <div className={`w-8 h-8 rounded-md flex items-center justify-center overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-slate-100'}`}>
-                                    <div className={`w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-b-[4px] border-b-transparent ml-0.5 ${isDarkMode ? 'border-l-slate-300' : 'border-l-slate-400'}`}></div>
+                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden border transition-colors ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-slate-100 border-slate-200'}`}>
+                                    <svg width="14" height="12" viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={isDarkMode ? 'text-slate-300' : 'text-slate-400'}>
+                                        <path d="M10.27 1.61c.77-1.33 2.69-1.33 3.46 0l8.7 15.07c.77 1.33-.19 3.-1.73 3H3.3c-1.54 0-2.5-1.67-1.73-3L10.27 1.61z" />
+                                    </svg>
                                 </div>
                                 <div className="flex gap-1">
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
