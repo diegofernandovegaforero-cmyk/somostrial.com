@@ -14,10 +14,7 @@ export default function Home() {
             <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 p-4">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <Image src="/logo-gray-light.png" alt="DIGITRIAL Logo" width={32} height={32} className="rounded-md" />
-                        <span className="text-xl font-bold tracking-tight text-[#0a1a3a]">
-                            DIGITRIAL
-                        </span>
+                        <Image src="/logo-digitrial.png" alt="DIGITRIAL Logo" width={160} height={40} className="object-contain" />
                     </div>
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
                         <Link href="#" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">Inicio</Link>
@@ -345,8 +342,8 @@ export default function Home() {
                         {/* Central abstract UI element */}
                         <div className="relative z-10 w-64 h-80 bg-white border border-gray-200 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                             <div className="w-full flex justify-between items-center mb-2">
-                                <div className="w-8 h-8 rounded-md bg-slate-100 flex items-center justify-center">
-                                    <Image src="/logo-gray-light.png" alt="DIGITRIAL" width={16} height={16} />
+                                <div className="w-8 h-8 rounded-md bg-slate-100 flex items-center justify-center overflow-hidden">
+                                    <Image src="/logo-digitrial.png" alt="DIGITRIAL" width={24} height={24} className="object-contain" />
                                 </div>
                                 <div className="flex gap-1">
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
@@ -429,7 +426,11 @@ export default function Home() {
             </div>
 
             {/* Simple dark footer base to match screenshot bottom edge */}
-            <footer className="bg-[#0f172a] h-16 w-full"></footer>
+            <footer className="bg-[#0f172a] py-6 w-full flex items-center justify-center">
+                <p className="text-slate-400 text-sm tracking-wide">
+                    Una marca: <span className="font-semibold text-slate-300">somostrial.com</span>
+                </p>
+            </footer>
         </div>
     );
 }
