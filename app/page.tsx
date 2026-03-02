@@ -32,8 +32,8 @@ export default function Home() {
                         {/* Vector Logo */}
                         <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-colors ${isDarkMode ? 'bg-slate-800 border-slate-700 border-2' : 'bg-slate-100 border-slate-200 border-2'}`}>
                             {/* Inner UP Triangle with Rounded Corners */}
-                            <svg width="26" height="22" viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={`transition-colors mt-0.5 ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
-                                <path d="M10.27 1.61c.77-1.33 2.69-1.33 3.46 0l8.7 15.07c.77 1.33-.19 3.-1.73 3H3.3c-1.54 0-2.5-1.67-1.73-3L10.27 1.61z" />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-colors mt-0.5 ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
+                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
                             </svg>
                         </div>
                         <div className="flex flex-col justify-center">
@@ -373,8 +373,8 @@ export default function Home() {
                         <div className="relative z-10 w-64 h-80 bg-white border border-gray-200 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                             <div className="w-full flex justify-between items-center mb-2">
                                 <div className={`w-8 h-8 rounded-[10px] flex items-center justify-center overflow-hidden border transition-colors ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-slate-100 border-slate-200'}`}>
-                                    <svg width="18" height="16" viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={`mt-0.5 ${isDarkMode ? 'text-slate-300' : 'text-slate-400'}`}>
-                                        <path d="M10.27 1.61c.77-1.33 2.69-1.33 3.46 0l8.7 15.07c.77 1.33-.19 3.-1.73 3H3.3c-1.54 0-2.5-1.67-1.73-3L10.27 1.61z" />
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`mt-0.5 ${isDarkMode ? 'text-slate-300' : 'text-slate-400'}`}>
+                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
                                     </svg>
                                 </div>
                                 <div className="flex gap-1">
