@@ -88,50 +88,50 @@ export default function Home() {
                     {/* Right content (Bento Grid) */}
                     <div className="grid grid-cols-2 gap-4 relative">
                         {/* Card 1 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow">
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow h-full flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500">
                                     <Layout className="w-5 h-5" />
                                 </div>
                                 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Premium</span>
                             </div>
-                            <h3 className="font-bold text-slate-800 text-lg mb-1">Diseño Web</h3>
+                            <h3 className="font-bold text-slate-800 text-lg mb-1 mt-auto">Diseño Web</h3>
                             <p className="text-emerald-500 text-sm font-semibold flex items-center gap-1">★ UX/UI</p>
                         </motion.div>
 
                         {/* Card 2 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow mt-8">
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow h-full flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
                                     <ShoppingCart className="w-5 h-5" />
                                 </div>
                                 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">E-comm</span>
                             </div>
-                            <h3 className="font-bold text-slate-800 text-lg mb-1">Tienda Online</h3>
+                            <h3 className="font-bold text-slate-800 text-lg mb-1 mt-auto">Tienda Online</h3>
                             <p className="text-blue-500 text-sm font-semibold flex items-center gap-1">★ Ventas</p>
                         </motion.div>
 
                         {/* Card 3 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow -mt-4">
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow h-full flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500">
                                     <Users className="w-5 h-5" />
                                 </div>
                                 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">SST</span>
                             </div>
-                            <h3 className="font-bold text-slate-800 text-lg mb-1">Talento Humano</h3>
+                            <h3 className="font-bold text-slate-800 text-lg mb-1 mt-auto">Talento Humano</h3>
                             <p className="text-indigo-500 text-sm font-semibold flex items-center gap-1">★ 100%</p>
                         </motion.div>
 
                         {/* Card 4 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow">
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-white p-6 rounded-3xl shadow-lg border border-gray-50 hover:shadow-xl transition-shadow h-full flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-500">
                                     <Video className="w-5 h-5" />
                                 </div>
                                 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Media</span>
                             </div>
-                            <h3 className="font-bold text-slate-800 text-lg mb-1">Producción</h3>
+                            <h3 className="font-bold text-slate-800 text-lg mb-1 mt-auto">Producción</h3>
                             <p className="text-purple-500 text-sm font-semibold flex items-center gap-1">★ 4K Cinema</p>
                         </motion.div>
                     </div>
