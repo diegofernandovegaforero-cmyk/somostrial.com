@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingCart, Layout, Users, MonitorSmartphone, Video, Rocket, Mouse } from 'lucide-react';
+import { ArrowRight, ShoppingCart, Layout, Users, MonitorSmartphone, Video, Rocket, Mouse, Moon } from 'lucide-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -26,6 +26,9 @@ export default function Home() {
                         <Link href="#" className="hover:text-blue-600 transition-colors">Contacto</Link>
                     </div>
                     <div className="flex items-center gap-4">
+                        <button className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors" aria-label="Toggle dark mode">
+                            <Moon className="w-5 h-5" />
+                        </button>
                         <button className="hidden md:flex bg-gradient-to-r from-blue-600 to-fuchsia-600 hover:opacity-90 text-white rounded-full px-6 py-2 text-sm font-bold shadow-md shadow-fuchsia-500/20 transition-all hover:scale-105">
                             DISEÑA TU PÁGINA WEB GRATIS
                         </button>
