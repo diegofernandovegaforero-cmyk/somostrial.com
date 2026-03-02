@@ -9,12 +9,13 @@ export default function Navbar() {
     return (
         <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <Link href="/" className="flex items-center">
-                    <img
-                        src="https://horizons-cdn.hostinger.com/6b9bdf39-faeb-49b5-9aef-94e01a05f6fc/64cb1933ae82848e86fed46062507d19.png"
-                        alt="DIGITRIAL"
-                        className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                    />
+                <Link href="/" className="flex items-center gap-2 group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-black shadow-md group-hover:shadow-blue-500/30 transition-all group-hover:scale-105">
+                        <span className="text-xl leading-none tracking-tighter">S</span>
+                    </div>
+                    <span className="text-xl font-bold tracking-tight text-slate-800">
+                        SOMOS<span className="text-blue-600">TRIAL</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Menu */}

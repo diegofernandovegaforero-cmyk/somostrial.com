@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ParticleBackground from "@/components/ParticleBackground";
-import ScrollThemeProvider from "@/components/ScrollThemeProvider";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,12 +20,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className="scroll-smooth">
-            <body className={inter.className} style={{ position: 'relative', backgroundColor: 'black' }}>
-                {/* Contenido principal */}
-                <div style={{ position: 'relative', zIndex: 1 }}>
+            <body className={`${inter.className} bg-[#f8fafc] text-slate-900`}>
+                <Navbar />
+                <main className="relative z-10 pt-20">
                     {children}
-                </div>
-                {/* Notificaciones (Toasts) */}
+                </main>
+                <Footer />
                 <Toaster />
             </body>
         </html>
