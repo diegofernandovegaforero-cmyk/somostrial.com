@@ -28,8 +28,18 @@ export default function Home() {
             {/* --- Navbar --- */}
             <nav className={`fixed top-0 w-full z-50 p-4 transition-colors ${isDarkMode ? 'bg-[#00050f]/90 border-slate-800' : 'bg-white/80 border-gray-100'} backdrop-blur-md border-b`}>
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <Image src="/logo-digitrial.png" alt="DIGITRIAL Logo" width={160} height={40} className="object-contain" />
+                    <div className="flex items-center gap-2 cursor-pointer">
+                        {/* CSS Vector Logo */}
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-sm ${isDarkMode ? 'bg-slate-800 border-slate-700 border' : 'bg-slate-100 border-slate-200 border'}`}>
+                            {/* Inner Play/Triangle Icon */}
+                            <div className={`w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-b-[6px] border-b-transparent ml-1 ${isDarkMode ? 'border-l-slate-300' : 'border-l-slate-400'}`}></div>
+                        </div>
+                        <div className="flex flex-col justify-center -space-y-1">
+                            <span className="text-2xl font-black tracking-tight flex items-center">
+                                <span className={isDarkMode ? 'text-blue-500' : 'text-blue-600'}>DIGI</span>
+                                <span className={isDarkMode ? 'text-slate-300' : 'text-slate-500'}>TRIAL</span>
+                            </span>
+                        </div>
                     </div>
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
                         <Link href="#" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">Inicio</Link>
@@ -360,8 +370,8 @@ export default function Home() {
                         {/* Central abstract UI element */}
                         <div className="relative z-10 w-64 h-80 bg-white border border-gray-200 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                             <div className="w-full flex justify-between items-center mb-2">
-                                <div className="w-8 h-8 rounded-md bg-slate-100 flex items-center justify-center overflow-hidden">
-                                    <Image src="/logo-digitrial.png" alt="DIGITRIAL" width={24} height={24} className="object-contain" />
+                                <div className={`w-8 h-8 rounded-md flex items-center justify-center overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-slate-100'}`}>
+                                    <div className={`w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-b-[4px] border-b-transparent ml-0.5 ${isDarkMode ? 'border-l-slate-300' : 'border-l-slate-400'}`}></div>
                                 </div>
                                 <div className="flex gap-1">
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
